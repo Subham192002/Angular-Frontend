@@ -1,0 +1,218 @@
+<div
+  class="col-md-8 offset-md-2 shadow-lg p-4 mb-4 bg-white rounded form-container"
+>
+  <h3 class="text-center mb-4">Create</h3>
+  <form (ngSubmit)="onSubmit()" #hospitalForm="ngForm">
+    <div class="form-row">
+      <!-- Patient ID -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Patient_id</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="hospital.patientId"
+          name="patientId"
+          required
+          [ngClass]="{ 'error-border': errorMessages.patientId }"
+        />
+        <div *ngIf="errorMessages.patientId" class="text-danger error-message">
+          {{ errorMessages.patientId }}
+        </div>
+      </div>
+
+      <!-- Doctor ID -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Doctor ID</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="hospital.doctorId"
+          name="doctorId"
+          required
+          [ngClass]="{ 'error-border': errorMessages.doctorId }"
+        />
+        <div *ngIf="errorMessages.doctorId" class="text-danger error-message">
+          {{ errorMessages.doctorId }}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <!-- Department Name -->
+      <!-- Department Name with Arrow and Placeholder -->
+      <div class="form-group col-md-6 mb-2">
+        <label for="deptName">Department Name</label>
+        <div class="position-relative">
+          <select
+            class="form-select"
+            id="deptName"
+            [(ngModel)]="hospital.deptName"
+            name="deptName"
+            (change)="onChange()"
+          >
+            <option value="" disabled selected>Select from dropdown</option>
+            <option *ngFor="let dept of department" [value]="dept.name">
+              {{ dept.name }}
+            </option>
+          </select>
+        </div>
+        <div *ngIf="errorMessages.deptName" class="text-danger error-message">
+          {{ errorMessages.deptName }}
+        </div>
+      </div>
+
+      <!-- Doctor Name -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Doctor Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="hospital.doctorName"
+          name="doctorName"
+          required
+          [ngClass]="{ 'error-border': errorMessages.doctorName }"
+        />
+        <div *ngIf="errorMessages.doctorName" class="text-danger error-message">
+          {{ errorMessages.doctorName }}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <!-- Specialization -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Specialization</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="hospital.specialization"
+          name="specialization"
+          required
+          [ngClass]="{ 'error-border': errorMessages.specialization }"
+        />
+        <div
+          *ngIf="errorMessages.specialization"
+          class="text-danger error-message"
+        >
+          {{ errorMessages.specialization }}
+        </div>
+      </div>
+
+      <!-- Patient Name -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Patient Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="hospital.patientName"
+          name="patientName"
+          required
+          [ngClass]="{ 'error-border': errorMessages.patientName }"
+        />
+        <div
+          *ngIf="errorMessages.patientName"
+          class="text-danger error-message"
+        >
+          {{ errorMessages.patientName }}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <!-- Gender Checkbox -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Gender</label><br />
+        <label class="me-3">
+          <input
+            type="radio"
+            [(ngModel)]="hospital.gender"
+            name="gender"
+            value="Male"
+            required
+          />
+          Male
+        </label>
+        <label class="me-3">
+          <input
+            type="radio"
+            [(ngModel)]="hospital.gender"
+            name="gender"
+            value="Female"
+          />
+          Female
+        </label>
+        <label>
+          <input
+            type="radio"
+            [(ngModel)]="hospital.gender"
+            name="gender"
+            value="Others"
+          />
+          Others
+        </label>
+        <div *ngIf="errorMessages.gender" class="text-danger error-message">
+          {{ errorMessages.gender }}
+        </div>
+      </div>
+
+      <!-- Disease -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Disease</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="hospital.disease"
+          name="disease"
+          required
+          [ngClass]="{ 'error-border': errorMessages.disease }"
+        />
+        <div *ngIf="errorMessages.disease" class="text-danger error-message">
+          {{ errorMessages.disease }}
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <!-- Contact Number -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Contact Number</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="hospital.contactNumber"
+          name="contactNumber"
+          required
+          [ngClass]="{ 'error-border': errorMessages.contact }"
+        />
+        <div *ngIf="errorMessages.contact" class="text-danger error-message">
+          {{ errorMessages.contact }}
+        </div>
+      </div>
+
+      <!-- Admit Date -->
+      <div class="form-group col-md-6 mb-2">
+        <label>Admit Date</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="hospital.admitDate"
+          name="admitDate"
+          required
+          [ngClass]="{ 'error-border': errorMessages.admitDate }"
+        />
+        <div *ngIf="errorMessages.admitDate" class="text-danger error-message">
+          {{ errorMessages.admitDate }}
+        </div>
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary submit-button">Submit</button>
+    <button
+      type="button"
+      class="btn btn-secondary clear-button ms-5"
+      (click)="hospitalForm.resetForm()"
+    >
+      Clear
+    </button>
+  </form>
+</div>

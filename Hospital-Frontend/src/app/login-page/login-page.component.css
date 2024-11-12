@@ -1,0 +1,184 @@
+.login {
+    background-color: #f7f7f7e5;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    margin-top: 7rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.403);
+}
+
+.login__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.login__field {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.login__icon {
+    position: absolute;
+    top: 70%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 18px;
+}
+
+.login__input {
+    width: 100%;
+    padding: 10px 10px 10px 45px; /* Adjust padding for icon space */
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: #fff;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.login__input:focus {
+    border-color: #1b96ae;
+}
+
+.button.login__submit {
+    background-color: #00bcd4;
+    color: #fff;
+    padding: 10px; 
+    border-radius: 20px; 
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button.login__submit:hover {
+    background-color: #52dbed;
+}
+
+
+.val {
+    color: rgba(255, 0, 0, 0.656);
+    margin-top: -16px; /* Adjust to bring closer to input */
+    font-size: 14px;
+    display: block;
+}
+
+
+.login__label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #555;
+    text-align: left;
+    font-weight: bold;
+}
+
+@media (max-width: 500px) {
+    .login {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
+/* Style for the password toggle button */
+.toggle-password {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 70%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+.toggle-password:focus {
+    outline: none;
+}
+
+/* Welcome Page Styling */
+.welcome {
+    text-align: center;
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.welcome h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.welcome p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.welcome .button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    color: #fff;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.welcome .button:hover {
+    background-color: #0097a7;
+}
+
+/* Fade-out animation effect */
+.fade-out {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Animation for entering login form */
+.login-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.login-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Styling adjustments for the login form */
+.login {
+    background-color: #f7f7f7e5;
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 400px;
+    margin: 50px auto;
+    margin-top: 5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

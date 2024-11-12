@@ -1,0 +1,54 @@
+
+<div *ngIf="!showLoginForm" class="welcome">
+    <h1>Welcome to My Website</h1>
+    <p>Click the button below to get started.</p>
+    <button class="button" (click)="getStarted()">Let's Get Started</button>
+  </div>
+
+
+<form *ngIf="showLoginForm" class="login" (ngSubmit)="onSubmit()">
+    <h2 class="login__title">LOGIN</h2>
+    
+    <div class="login__field">
+        <label for="userName" class="login__label">Username</label>
+        <i class="login__icon fas fa-user"></i>
+        <input
+        
+            type="text"
+            class="login__input"
+            placeholder="Username"
+            [(ngModel)]="user.userName"
+            name="userName"
+            id="userName"
+            (click)="removeVal()"
+        />   
+    </div>
+    <span class="val">{{ValidationUser}}</span>
+    
+    <div class="login__field">
+        <label for="password" class="login__label">Password</label>
+        <i class="login__icon fas fa-lock"></i>
+        <input
+            [type]="showPassword ? 'text' : 'password'"
+            class="login__input"
+            placeholder="Password"
+            [(ngModel)]="user.password"
+            name="password"
+            id="password"
+            (click)="removeVal()"
+        />
+        <button
+            type="button"
+            class="toggle-password"
+            (click)="togglePasswordVisibility()"
+        >
+            <i [ngClass]="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
+        </button>
+    </div>
+    <span class="val">{{ValidationPassword}}</span>
+   
+
+    <button class="button login__submit" type="submit">
+        <span class="button__text">Login</span>
+    </button>
+</form>

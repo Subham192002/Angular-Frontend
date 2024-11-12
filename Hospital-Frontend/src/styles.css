@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+.toast-top-right {
+    top: 70px !important; /* Increase the top value slightly to move it lower */
+    right: 15px !important;
+  }
+  

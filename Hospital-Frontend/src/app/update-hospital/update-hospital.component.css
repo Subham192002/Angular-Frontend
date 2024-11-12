@@ -1,0 +1,67 @@
+/* Container for the form */
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Background color of the form */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Header styles */
+.form-container h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* Input styles */
+.form-control {
+    border-radius: 0.5rem;
+    padding: 6px;
+    font-size: 0.85rem;
+}
+
+/* Submit button styles */
+button[type="submit"] {
+    font-size: 1rem;
+    padding: 8px;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: #007bff; /* Button color */
+    color: white; /* Text color for button */
+    border: none; /* Remove border */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: scale(1.02); /* Slight scaling effect */
+}
+
+/* Form layout styles */
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 12px;
+}
+
+.read-only-input {
+    background-color: #e9ecef; /* Light grey background */
+    color: #6c757d; /* Grey text color */
+  }
+
+/* Error message styles */
+.error-message {
+    font-size: 0.75rem;
+    color: red; /* Color for error messages */
+    margin-top: 4px;
+}
+
+/* Error border style */
+.error-border {
+    border-color: red; /* Red border for invalid inputs */
+}

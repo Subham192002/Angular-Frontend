@@ -1,0 +1,98 @@
+.table {
+    border-collapse: collapse; /* Use collapse to merge borders */
+    width: 100%; /* Make the table full width */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Shadow effect on the table */
+}
+
+.table th {
+    border: 1px solid #dee2e6; /* Border for each cell */
+    padding: 4px 8px; /* Reduced horizontal and vertical padding */
+    text-align: center;
+    vertical-align: middle;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+/* Background color for header */
+.table th {
+    background-color: #f1f1f1;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Button styles */
+.table .btn-outline-info, 
+.table .btn-outline-danger {
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.table .btn-outline-info:hover {
+    background-color: #17a2b8;
+    color: #fff;
+}
+
+.table .btn-outline-danger:hover {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* Table container */
+.table-responsive {
+    padding: 15px;
+}
+
+/* Add spacing between buttons */
+.ml-2 {
+    margin-left: 10px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+  }
+  
+  .search-btn,
+  .clear-btn {
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 768px) {
+    .search {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  
+    .search-input {
+      margin-right: 0;
+      margin-bottom: 5px;
+      margin-top: 2px;
+    }
+  
+    .search-btn,
+    .clear-btn {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  .datebox {
+    background: linear-gradient(to bottom right , #24cbf0, rgb(79, 136, 144));
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      margin-top: 200px;
+      width: 170px;
+      position: absolute;
+      left: 1050px;
+      border-radius: 5px;
+  } 
+  

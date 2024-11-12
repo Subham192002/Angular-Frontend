@@ -1,0 +1,86 @@
+/* Container for the form */
+.form-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .form-container h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  /* Input styles */
+  .form-control {
+    border-radius: 0.5rem;
+    padding: 6px;
+    font-size: 0.85rem;
+  }
+  
+ /* Submit and Clear button styles */
+button[type="submit"],
+button[type="button"] {
+  font-size: 0.8rem;
+  padding: 6px 0;
+  width: 30%;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+button[type="button"] {
+  background-color: #6c757d; /* Gray background for the clear button */
+}
+
+button[type="button"]:hover {
+  background-color: #5a6268; /* Darker gray on hover for the clear button */
+}
+
+/* Align buttons */
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  gap:10px;
+}
+
+  /* Form layout */
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .form-group {
+    flex: 1 1 calc(50% - 10px);
+    margin-bottom: 12px;
+  }
+  
+  /* Error message */
+  .error-message {
+    font-size: 0.75rem;
+    color: red;
+    margin-top: 4px;
+  }
+
+  .error-border {
+    border: 2px solid red; 
+  }
+  
+  .custom-select {
+    appearance: none; /* Remove default arrow */
+    padding-right: 2rem; /* Space for custom arrow */
+  }
+  
+  .position-relative {
+    position: relative;
+  }
+  
+  

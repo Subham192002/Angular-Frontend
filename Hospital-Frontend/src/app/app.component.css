@@ -1,0 +1,48 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif; /* Ensure this font is included in your project */
+    background-color: #f4f7f9; /* Light background color */
+    color: #333; /* Dark text color */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Navbar Styling */
+  .cyan-gradient {
+    background: linear-gradient(to right, #00bcd4, #4dd0e1); /* Gradient background */
+  }
+  
+  .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Brand color */
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    color: white !important; /* Link color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+  }
+  
+  .nav-link.active{
+    font-weight: bold;
+  }
+  /* Page Title Styling */
+  .page-title {
+    margin-top: 20px;
+    font-size: 36px; /* Large font size for title */
+    color: #333; /* Dark title color */
+  }
+  
+  
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    .navbar-nav {
+      flex-direction: column; /* Stack nav items on smaller screens */
+    }
+  
+    .page-title {
+      font-size: 28px; /* Smaller font size on mobile */
+    }
+  }

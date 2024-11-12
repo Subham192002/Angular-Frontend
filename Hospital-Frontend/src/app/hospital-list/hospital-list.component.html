@@ -1,0 +1,103 @@
+<div class="search">
+  <input
+    type="search"
+    [(ngModel)]="searchid"
+    class="search-input form-control"
+    placeholder="Search By patient Id"
+  />
+  <select [(ngModel)]="searchName" class="form-select search-input">
+    <option value="">Select Department</option>
+    <option *ngFor="let dept of department" [value]="dept.name">{{ dept.name }}</option>
+  </select>
+  
+  <input
+    type="search"
+    [(ngModel)]="searchPatient"
+    class="search-input form-control"
+    placeholder="Search By Patient Name"
+  />
+  <input
+  type="search"
+  [(ngModel)]="searchDisease"
+  class="search-input form-control"
+  placeholder="Search By Disease"
+/>
+  <button (click)="toggleDown()" class="datebtn" class="btn btn-outline-info">
+    Date
+    <i class="bi bi-arrow-down-square-fill"></i>
+  </button>
+  <div *ngIf="showDateFields" class="datebox">
+    <label>Enter Start date</label>
+    <input
+      type="date"
+      [(ngModel)]="searchFrom"
+      class="search-input form-control mb-2"
+      placeholder="from"
+    />
+    <label>Enter End Date </label>
+    <input
+      type="date"
+      [(ngModel)]="searchTo"
+      class="search-input form-control"
+      placeholder="to"
+    />
+  </div>
+
+  <button (click)="onSearch()" class="btn btn-info search-btn m-2 text-light">
+    <i class="bi bi-search"></i>
+    Search
+  </button>
+  <button (click)="clearSearch()" class="btn btn-danger clear-btn m-2">
+    <i class="bi bi-x"></i>
+    Clear
+  </button>
+</div>
+  <table
+    id="hospitalTable"
+    class="table table-hover table-bordered modern-table"
+  >
+    <thead class="thead-light">
+      <tr>
+        <th>patientId</th>
+        <th>doctorId</th>
+        <th>deptName</th>
+        <th>doctorName</th>
+        <th>specialization</th>
+        <th>patientName</th>
+        <th>gender</th>
+        <th>disease</th>
+        <th>contactNumber</th>
+        <th>admitDate</th>
+        <th>status</th>
+      </tr>
+    </thead>
+  </table>
+
+<div class="buttonGroup">
+    <button
+      class="btn btn-outline-info ms-3"
+      [routerLink]="['/create-hospital']"
+    >
+      <i class="bi bi-person-fill-add"></i>
+      Add
+    </button>
+
+    <button id="updateBtn" class="btn btn-info update-button ms-3" disabled>
+      <i class="bi bi-pencil-square"></i>
+      Update
+    </button>
+    <button id="deleteBtn" class="btn btn-danger delete-button ms-3" disabled>
+      <i class="bi bi-trash"></i>
+      Delete
+    </button>
+
+    <button
+      (click)="logOut()"
+      class="btn btn-outline-danger ms-3"
+      id="logOutButton"
+    >
+      <i class="bi bi-box-arrow-left"></i>
+      LogOut
+    </button>
+</div>
+

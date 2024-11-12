@@ -1,0 +1,183 @@
+<div class="col-md-8 offset-md-2 shadow-lg p-4 mb-4 bg-white rounded form-container">
+    <h3 class="text-center mb-4">Update </h3>
+    <form (ngSubmit)="onSubmit()" >
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-2">
+          <label>Patient_id</label>
+          <input
+            type="number"
+            class="form-control read-only-input"
+            [(ngModel)]="hospital.patientId"
+            name="patientId"
+            required
+            readonly
+            [ngClass]="{'error-border': errorMessages.patientId}"
+          />
+        </div>
+  
+        <div class="form-group col-md-6 mb-2">
+          <label>doctorId</label>
+          <input
+            type="text"
+            class="form-control read-only-input"
+            [(ngModel)]="hospital.doctorId"
+            name="doctorId"
+            required
+            readonly
+            [ngClass]="{'error-border': errorMessages.doctorId}"
+          />
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-2">
+          <label>deptName</label>
+          <input
+            type="text"
+            class="form-control read-only-input"
+            [(ngModel)]="hospital.deptName"
+            name="deptName"
+            required
+            readonly
+            [ngClass]="{'error-border': errorMessages.deptName}"
+          />
+         
+        </div>
+        <div class="form-group col-md-6 mb-2">
+          <label>doctorName</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="hospital.doctorName"
+            name="price"
+            required
+            [ngClass]="{'error-border': errorMessages.doctorName}"
+          />
+          <div *ngIf="errorMessages.doctorName" class="text-danger error-message">
+            {{ errorMessages.doctorName }}
+          </div>
+        </div>
+      </div>
+  
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-2">
+          <label>specialization</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="hospital.specialization"
+            name="specialization"
+            required
+            [ngClass]="{'error-border': errorMessages.specialization}"
+          />
+          <div *ngIf="errorMessages.specialization" class="text-danger error-message">
+            {{ errorMessages.specialization }}
+          </div>
+        </div>
+  
+        <div class="form-group col-md-6 mb-2">
+          <label>patientName</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="hospital.patientName"
+            name="patientName"
+            required
+            [ngClass]="{'error-border': errorMessages.patientName}"
+          />
+          <div *ngIf="errorMessages.patientName" class="text-danger error-message">
+            {{ errorMessages.patientName }}
+          </div>
+        </div>
+      </div>
+  
+      
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-2">
+            <label>Gender</label><br />
+            <label class="me-3">
+              <input
+                type="radio"
+                [(ngModel)]="hospital.gender"
+                name="gender"
+                value="Male"
+                required
+              />
+              Male
+            </label>
+            <label class="me-3">
+              <input
+                type="radio"
+                [(ngModel)]="hospital.gender"
+                name="gender"
+                value="Female"
+              />
+              Female
+            </label>
+            <label>
+              <input
+                type="radio"
+                [(ngModel)]="hospital.gender"
+                name="gender"
+                value="Others"
+              />
+              Others
+            </label>
+          <div *ngIf="errorMessages.gender" class="text-danger error-message">
+            {{ errorMessages.gender }}
+          </div>
+        </div>
+  
+        <div class="form-group col-md-6 mb-2">
+          <label>Disease</label>
+          <input
+            type="text"
+            class="form-control"
+            [(ngModel)]="hospital.disease"
+            name="disease"
+            required
+            [ngClass]="{'error-border': errorMessages.disease}"
+          />
+          <div *ngIf="errorMessages.disease" class="text-danger error-message">
+            {{ errorMessages.disease }}
+          </div>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-2">
+          <label>Contact</label>
+          <input
+            type="number"
+            class="form-control"
+            [(ngModel)]="hospital.contactNumber"
+            name="contactNumber"
+            required
+            [ngClass]="{'error-border': errorMessages.contactNumber}"
+          />
+          <div *ngIf="errorMessages.contactNumber" class="text-danger error-message">
+            {{ errorMessages.contactNumber }}
+          </div>
+        </div>
+  
+        <div class="form-group col-md-6 mb-2">
+          <label>AdmitDate</label>
+          <input
+            type="date"
+            class="form-control"
+            [(ngModel)]="hospital.admitDate"
+            name="admitDate"
+            required
+            [ngClass]="{'error-border': errorMessages.admitDate}"
+          />
+          <div *ngIf="errorMessages.admitDate" class="text-danger error-message">
+            {{ errorMessages.admitDate }}
+          </div>
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary submit-button">Submit</button>
+      
+    </form>
+  </div>
+  
